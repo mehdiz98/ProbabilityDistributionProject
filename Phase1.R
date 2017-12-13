@@ -29,6 +29,27 @@ cugen <- function(){
   return(dugen(1,0))
 }
 
+#6
+gegen <- function(parameter){
+  
+  i <- 0
+  result <- brgen(parameter) 
+  
+  while(result < parameter){
+    result <- brgen(parameter)
+  }
+  
+  result <- brgen(parameter)
+  
+  while(result < parameter){
+    i++
+      result <- brgen(parameter)
+  }
+  
+  return(i)
+  
+}
+
 #7
 expgen <- function(lambda){
   uni <- cugen()
