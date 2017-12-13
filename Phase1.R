@@ -40,9 +40,9 @@ brgen <- function(p)
 {
   temp <- cugen()
   if(temp < p)
-    return(0)
-  else
     return(1)
+  else
+    return(0)
 }
 #5
 bigen <- function(p, n)
