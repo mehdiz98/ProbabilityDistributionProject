@@ -59,12 +59,12 @@ gegen <- function(parameter){
   i <- 0
   result <- brgen(parameter) 
   
-  while(result < parameter){
+  while(result == 0){
     result <- brgen(parameter)
   }
   result <- brgen(parameter)
   
-  while(result < parameter){
+  while(result == 0){
     i = i+1
     result <- brgen(parameter)
   }
