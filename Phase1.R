@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 library(ggplot2)
 
-=======
->>>>>>> 35a4cc38c260845383667bec274f4c0c495f7881
 #1
 # we are using Linear congruential generator its better not to change the parameters
 regnrator <- function(m = 2 ^ 48, a = 25214903917, c = 11, floor = 0,  roof = 1, n = 1, Integer = FALSE){
@@ -28,21 +25,16 @@ regnrator <- function(m = 2 ^ 48, a = 25214903917, c = 11, floor = 0,  roof = 1,
   return(numbers)
   
 }
-<<<<<<< HEAD
 #2
 dugen <- function(a,b){
   s = min(a,b)
   s2 = max(a,b)
   return(regnrator(n = 1,floor = s,roof = s2))
 }
-=======
-
->>>>>>> 35a4cc38c260845383667bec274f4c0c495f7881
 #3
 cugen <- function(){
   return(dugen(1,0))
 }
-<<<<<<< HEAD
 #4
 brgen <- function(p)
 {
@@ -61,9 +53,6 @@ bigen <- function(p, n)
   temp <- temp - 1
   return(temp)
 }
-=======
-
->>>>>>> 35a4cc38c260845383667bec274f4c0c495f7881
 #6
 gegen <- function(parameter){
   
@@ -76,20 +65,11 @@ gegen <- function(parameter){
   result <- brgen(parameter)
   
   while(result < parameter){
-<<<<<<< HEAD
     i = i+1
     result <- brgen(parameter)
   }
   return(i)
 }
-=======
-    i++
-      result <- brgen(parameter)
-  }
-  return(i)
-}
-
->>>>>>> 35a4cc38c260845383667bec274f4c0c495f7881
 #7
 expgen <- function(lambda){
   uni <- cugen()
@@ -106,7 +86,6 @@ gagen <- function(exp_parameter, k){
   return(sum)
 }
 
-<<<<<<< HEAD
 # 9
 pogen <- function(ex,t = 1){
   i = 0;
@@ -120,8 +99,6 @@ pogen <- function(ex,t = 1){
 }
 
 
-=======
->>>>>>> 35a4cc38c260845383667bec274f4c0c495f7881
 #10
 nogen <- function(u, s){
   pois <- pogen(s) #pois = poisson(sigma) ~ N(sigma, sigma)
@@ -276,4 +253,4 @@ f10 <- function(a,b){
   bins = seq(-100,100,1)
   qplot(Normal, breaks = bins, ylab = "count",xlim = c(-100,100))
 }
-f10(0,100)
+f10(0,5)
