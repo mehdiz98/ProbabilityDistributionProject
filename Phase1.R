@@ -38,16 +38,13 @@ gegen <- function(parameter){
   while(result < parameter){
     result <- brgen(parameter)
   }
-  
   result <- brgen(parameter)
   
   while(result < parameter){
     i++
       result <- brgen(parameter)
   }
-  
   return(i)
-  
 }
 
 #7
@@ -55,6 +52,15 @@ expgen <- function(lambda){
   uni <- cugen()
   exp <- (-1.0/lambda)*log(uni)
   return(exp)
+}
+
+#8
+gagen <- function(exp_parameter, k){
+  sum <- 0
+  for(i in 1:k){
+    sum <- sum + expgen(exp_parameter)
+  }
+  return(sum)
 }
 
 #10
